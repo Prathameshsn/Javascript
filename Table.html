@@ -1,0 +1,45 @@
+<html>
+    <head>
+    </head>
+
+<body>
+<script>
+    var count=1;
+    var coun=1;
+
+function row()
+    { 
+        var table = document.getElementById("tab");
+        var row = table.insertRow();
+    
+        row.innerHTML = "Row"+count++;
+
+      
+    }
+
+
+function column()
+    { 
+    var table = document.getElementById("col");
+        var col = table.insertCell();
+        // var row=col.insertRow();
+        col.innerHTML = "Column"+coun++;
+    }
+
+</script>
+
+<center>
+<button onclick="row()">Add Row</button><br>
+<button onclick="column()">Add Column </button><br>
+
+<br><table border="4" id="tab">
+    <tr id=col>
+    <td id=row>
+    </td>
+    </tr>
+
+</table>
+</center>
+
+</body>
+</html>

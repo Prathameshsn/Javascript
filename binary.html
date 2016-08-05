@@ -1,0 +1,88 @@
+<html>
+    <head>
+  </head>
+<body>
+<script>
+function Node(val)
+    {
+        this.value=val;
+        this.left=null;
+        this.right=null;
+    }
+
+function BinaryTree()
+    {
+        this.root=null;
+    }
+
+BinaryTree.prototype.push=function(val)
+    {
+        var root=this.root;
+        var newNode=new Node(val);
+
+    if(root==null)
+        {
+            this.root=newNode;
+            return;
+        }
+    //  console.log("root"+root.value);
+    var currentNode=this.root;
+    
+    while(currentNode)
+        {
+            if(val<currentNode.value)
+            {
+                if(!currentNode.left)
+                {
+                    currentNode.left=newNode;
+                    console.log("left node "+currentNode.left.value);
+                    break;
+                }
+                else
+                {
+                    currentNode=currentNode.left;
+                }
+            }
+            else
+            {
+                if(!currentNode.right)
+                {
+                    currentNode.right = newNode;
+                    console.log("right node "+currentNode.right.value);
+                    break;
+                }
+                else
+                {
+                    currentNode = currentNode.right;
+                }
+            }
+
+        }
+
+    }
+
+BinaryTree.prototype.inorderTraversal=function(node)
+    {
+        if (node)
+        {
+            this.inorderTraversal(node.left);
+            console.log(node.value);
+            this.inorderTraversal(node.right);
+        }
+    }
+
+
+
+var bst=new BinaryTree();
+bst.push(10);
+bst.push(20);
+bst.push(40);
+bst.push(50);
+bst.push(30);
+
+console.log(bst.root);
+console.log("Inorder Traversal");
+bst.inorderTraversal(bst.root);
+        </script>
+    </body>
+</html>

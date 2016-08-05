@@ -1,0 +1,59 @@
+<html>
+<body>
+    <script>
+
+       var i = 0;
+       var j = 0;
+
+        var calculation =
+        {
+
+            first : function(K)
+            {
+                i=K;
+               
+                return this;
+               
+            },
+
+            second : function(k)
+            {
+                j=k;
+                return this;
+               
+            },
+
+            sum : function()
+            {
+                var print=i+j;
+                console.log(print);
+            },
+        
+            // return
+            // {first:first,second:second:sum:sum};   
+        
+        };
+        // var obj = new calculation();
+        // console.log(obj.second())
+        calculation.first(3).second(4).sum();
+
+
+    //     var abc = 
+    //     {
+    //      step1  : function()
+    //       {
+    //          console.log("a"); 
+    //          return this;
+    //       },
+
+    //       step2   : function()
+    //      {
+    //          console.log("b"); 
+    //          return this;
+    //       },
+    //     };
+    // abc.step1().step2();
+        
+    </script>
+</body>
+</html>

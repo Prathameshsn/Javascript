@@ -1,0 +1,188 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+        //     var key;
+        //     var value;
+        //     var size=8;
+
+        //     function hashEntry(var key,var value)
+        //     {
+        //         this.key=key;
+        //         this.value.value;
+        //     }
+
+        //     function getkey()
+        //     {
+        //         return key;
+        //     }
+
+        //     function getValue()
+        //     {
+        //         return value;
+        //     }
+
+
+        //    var hashEntry=new Array[size];
+
+        //    for(var i=0;i<size-1;i++)
+        //    {
+        //         hashEntry[i]=null;
+        //    }
+
+        //    function get(int key)
+        //    {
+        //        var hash=(key%size);
+        //        while(hashEntry[hash]!=null && hashEntry[hash].getValue()!=key)
+        //         hash=(hash+1)%size;
+        //         return hashEntry[hash].getValue();
+        //    }
+
+        //    function put(int key,int value)
+        //    {
+        //        var hash=(key%size);
+        //        while(hashEntry[hash]!=null && hashEntry[hash].getValue()!=key)
+        //         hash=(hash+1)%size;
+
+        //         hashEntry[hash]=function hashEntry(key,value);
+        //    }
+var HashTable = function() {
+  this._storage = [];
+  this._count = 0;
+  this._limit = 8;
+}
+
+
+HashTable.prototype.insert = function(key, value) {
+var index = this.hashFunc(key, this._limit);
+  var bucket = this._storage[index]
+   
+  if (!bucket) {
+    
+    var bucket = [];
+    this._storage[index] = bucket;
+  }
+
+  var override = false;
+  
+  for (var i = 0; i < bucket.length; i++) {
+    var tuple = bucket[i];
+    if (tuple[0] === key) 
+    {
+      tuple[1] = value;
+      override = true;
+    }
+  }
+
+  if (!override) 
+  {
+    bucket.push([key, value]);
+    this._count++
+      
+      if (this._count > this._limit * 0.75) {
+        this.resize(this._limit * 2);
+      }
+  }
+  return this;
+};
+
+
+HashTable.prototype.remove = function(key) {
+  var index = this.hashFunc(key, this._limit);
+  var bucket = this._storage[index];
+  if (!bucket) {
+    return null;
+  }
+  
+  for (var i = 0; i < bucket.length; i++) {
+    var tuple = bucket[i];
+    if (tuple[0] === key) {
+      
+      bucket.splice(i, 1);
+      this._count--;
+      if (this._count < this._limit * 0.25) {
+        this._resize(this._limit / 2);
+      }
+      return tuple[1];
+    }
+  }
+};
+
+
+
+HashTable.prototype.retrieve = function(key) {
+  var index = this.hashFunc(key, this._limit);
+  var bucket = this._storage[index];
+
+  if (!bucket) 
+  {
+    return null;
+  }
+
+  for (var i = 0; i < bucket.length; i++) 
+  {
+    var tuple = bucket[i];
+    if (tuple[0] === key) 
+    {
+      return tuple[1];
+    }
+  }
+
+  return null;
+};
+
+
+HashTable.prototype.hashFunc = function(str, max) {
+  var hash = 0;
+  for (var i = 0; i < str.length; i++) {
+    var letter = str[i];
+    hash = (hash << 5) + letter.charCodeAt(0);
+    hash = (hash & hash) % max;
+  }
+  return hash;
+};
+
+
+HashTable.prototype.resize = function(newLimit) {
+  var oldStorage = this._storage;
+  this._limit = newLimit;
+  this._count = 0;
+  this._storage = [];
+
+  oldStorage.forEach(function(bucket) {
+    if (!bucket) {
+      return;
+    }
+    for (var i = 0; i < bucket.length; i++) {
+      var tuple = bucket[i];
+      this.insert(tuple[0], tuple[1]);
+    }
+  }.bind(this));
+};
+
+
+HashTable.prototype.retrieveAll = function() {
+  console.log(this._storage);
+};
+
+
+var hashT = new HashTable();
+hashT.insert('Alex Hawkins', '510-599-1930');
+hashT.insert('Boo Radley', '520-589-1970');
+hashT.insert('Vance Carter', '120-589-1970').insert('Rick Mires', '520-589-1970').insert('Tom Bradey', '520-589-1970').insert('Biff Tanin', '520-589-1970');
+hashT.insert('Rick Mires', '650-589-1970').insert('Tom Bradey', '818-589-1970').insert('Biff Tanin', '987-589-1970');
+
+
+hashT.remove('Rick Mires');
+hashT.remove('Tom Bradey');hashT.insert('Dick Mires', '650-589-1970').insert('Lam James', '818-589-1970').insert('Ricky Ticky Tavi', '987-589-1970');
+hashT.retrieveAll();
+
+console.log(hashT.retrieve('Lam James'));  
+console.log(hashT.retrieve('Dick Mires'));
+console.log(hashT.retrieve('Ricky Ticky Tavi')); 
+console.log(hashT.retrieve('Alex Hawkins')); 
+console.log(hashT.retrieve('Lebron James')); 
+
+        </script>
+    </body>
+</html>

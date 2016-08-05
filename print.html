@@ -1,0 +1,17 @@
+<html>
+    <head>
+    </head>
+
+    <body>
+        <script>
+        var a=Array.apply(null,Array(100)).map(function(_,i){return i+1;});
+        console.log(a);
+
+        var c=a.map(function(current)
+        {
+            return((current%3==0) && (current%5==0)? 'abc')
+        })
+        console.log(c);
+        </script>
+    </body>
+</html>  

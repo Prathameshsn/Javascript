@@ -1,0 +1,54 @@
+<html>
+<head>
+
+</head>
+
+<body>
+    <h1>hello</h1>
+
+    <script>
+        // var plus = document.getElementById('plus').value,
+
+        var stack = [5];
+        
+        for(var i=0;i<3;i++)
+        {
+            var num=prompt("Enter Element");
+            stack[i]=num;
+        }
+        
+
+        for(var i=0;i<3;i++)
+        {
+            if(stack[i]=="+")
+                {
+                    var add=stack[i-1]+stack[i+1]; 
+
+                    for(var i=0;i<3;i++)
+                        {
+                        stack.pop();
+                        }
+                         stack.push(add);         
+                }
+
+            else if(stack[i]=="-")
+                {
+                    var min=stack[i-1]-stack[i+1];
+
+                    for(var i=0;i<3;i++)
+                        {
+                        stack.pop();
+                        }
+                        stack.push(min);
+                }   
+            
+        }
+
+        console.log("Answer is :"+stack);
+    
+
+    </script>
+<!--<input type="text" id="plus" />-->
+</body>
+
+</html>
