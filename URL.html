@@ -1,0 +1,27 @@
+<html>
+    <body>
+        <h1 ><b>URL Parts</b></h1><br>
+    <script>
+
+var link = document.createElement('a');
+
+//  set href to any path
+link.setAttribute('href', 'http://example.com:12345/blog/foo/bar?startIndex=1&pageSize=10');
+
+
+document.write("Hostname is:   "+link.hostname);  //  'example.com'
+document.write("<br><br>")
+
+document.write("Port Number is:   "+link.port);      //  12345
+document.write("<br><br>")
+
+document.write("Search:   "+link.search);    //  '?startIndex=1&pageSize=10'
+document.write("<br><br>");
+
+document.write("Path Name:   "+link.pathname);  //  '/blog/foo/bar'
+document.write("<br><br>")
+
+document.write("Protocol:   "+link.protocol);  //  'http:'
+    </script>
+    </body>
+<html>

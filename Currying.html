@@ -1,0 +1,32 @@
+<html>
+<body>
+
+<script>
+
+    var avg=function(...n)
+        {
+            var t=0;
+            for(var i=0;i<n.length;i++)
+                {
+                // t+=n[i];
+
+                    t=t+n[i];
+                }
+            return t/n.length;
+        }
+
+    var run = function(fn, ...n)
+        {
+            return function(...m)
+                {
+                    return fn.apply(this, n.concat(m))
+                }
+        }
+
+    var doAvg = run(avg, 1,2);
+    console.log(doAvg(3));
+
+</script>
+
+</body>
+</html>

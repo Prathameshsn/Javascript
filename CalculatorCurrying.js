@@ -1,13 +1,21 @@
+ var num8,num9,num3;
 
-            var num3;
-
-            function add()
+            function add(num1,num2)
                 {
-                    var num1=document.getElementById("ab").value
-                    var num2=document.getElementById("cd").value
+                    // num1=document.getElementById("ab").value
+                    // num2=document.getElementById("cd").value
                     num3=parseInt(num1)+parseInt(num2);    
                 }
 
+                num8=document.getElementById("ab").value
+                num9=document.getElementById("cd").value
+
+                // function re()
+                // {
+                var add1=add(num8); 
+                // }     
+                
+                
             function sub()
                 {
                     var num1=document.getElementById("ab").value

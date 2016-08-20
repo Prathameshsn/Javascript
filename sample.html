@@ -22,13 +22,15 @@
         {
             if(stack[i]=="+")
                 {
-                    var add=stack[i-1]+stack[i+1]; 
+                    // var a=stack[i-1];
+                    // var b=stack[i+1];
+                    var add=parseInt(stack[i-1])+parseInt(stack[i+1]); 
 
                     for(var i=0;i<3;i++)
                         {
-                        stack.pop();
+                         stack.pop();
                         }
-                         stack.push(add);         
+                        stack.push(add);         
                 }
 
             else if(stack[i]=="-")
@@ -37,18 +39,18 @@
 
                     for(var i=0;i<3;i++)
                         {
-                        stack.pop();
+                         stack.pop();
                         }
                         stack.push(min);
                 }   
             
         }
 
-        console.log("Answer is :"+stack);
+        console.log(stack);
     
 
     </script>
-<!--<input type="text" id="plus" />-->
+    
+    <!--<input type="text" id="plus" />-->
 </body>
-
 </html>
