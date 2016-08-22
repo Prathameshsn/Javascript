@@ -1,0 +1,21 @@
+
+<!--Fetch data from URL using fetch API-->
+
+<html>
+<body>
+
+<script>
+
+    fetch('http://www.puzzlers.org/pub/wordlists/pocket.txt')
+
+    .then(function(response) {
+        return response.text();
+    })
+    .then(function(text) {
+        document.write(text);
+    });
+
+</script>
+
+</body>
+</html>

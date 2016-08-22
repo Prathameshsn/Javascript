@@ -1,28 +1,111 @@
-    <html>
+<html>
     <body>
         <script>
-            var today = new Date();
-            // alert(today);
-            // today.setDate(9);
-            var tomorrow = new Date();
 
-        var d= today.getDate()+1;
-        var m= today.getMonth()+1
-        var y= today.getFullYear()+1;
+            // get Two dates
+            var date1 = new Date("4, 22, 2017"); 
+            var date2 = new Date("5, 1, 2017" );
+            var cdate = new Date();
+            var cd = cdate.getFullYear()
+
+            // split date
+            var d1 = date1.getDate();   
+            var m1 = date1.getMonth()+1;
+            var y1 = date1.getFullYear();
+
+            var d2 = date2.getDate();   
+            var m2 = date2.getMonth()+1;
+            var y2 = date2.getFullYear();
 
 
-        document.write("Next Day Date: "+d+" / "+m+" / "+y);
-            // today.prototype.nextday=function()
-            // {
-
-            // tomorrow.setDate(today.getDate()+1);
-            // tomorrow.setDate(today.getMonth()+1);
-            // tomorrow.setDate(today.getYear()+1);
-                // document.write("Next Day Date is:  " + today.getDate());
-                //   document.write("Next Day Date is:  "+ today.getYear());
-               
-            // }
+            /** Taking array for printing month name */
+            var month=new Array();  
+            month[0] = "January";
+            month[1] = "February";
+            month[2] = "March";
+            month[3] = "April";
+            month[4] = "May";
+            month[5] = "June";
+            month[6] = "July";
+            month[7] = "August";
+            month[8] = "September";
+            month[9] = "October";
+            month[10] = "November";
+            month[11] = "December";
             
-      </script>
+           
+          var sh;
+          var sh1;
+          /**Switch cases for print 1st 2nd instead of 1 2 */
+          console.log(d1)
+
+           switch(d1) {
+               case 1:
+                   sh="st";
+                   break;
+               case 2:
+                   sh="nd";
+                   break;
+               case 3:
+                   sh="rd";
+                   break;
+               default:
+                   sh="th"   
+           }
+
+           switch(d2) {
+               case 1:
+                   sh1="st";
+                   break;
+               case 2:
+                   sh1="nd";
+                   break;
+               case 3:
+                   sh1="rd";
+                   break;
+               default:
+                   sh1="th"   
+           }
+
+
+           console.log(sh)
+            
+            /** if the date range begins
+             *  in the current year and 
+             *  ends within one year */
+            if(y1 == cd && m1>=m2) {
+                    document.write("Starting Date:  - "+month[date1.getMonth()]+" "+d1+sh);
+                    document.write("<br>");
+                    document.write("Ending Date:  - "+month[date2.getMonth()]+"  "+d2+sh1);
+                }
+                
+            /**If the range ends in 
+             * the same month that
+             *  it begins */
+            else if(m1==m2) {
+                    document.write("Starting Date:  "+y1+"-"+d1+sh);
+                    document.write("<br>");
+                    document.write("Ending Date:  "+y2+"- "+d2+sh1);
+                }
+
+            /**if the date range ends 
+            * in less than a year 
+            * from when it begins */
+            else if(m1>m2 || y1==y2) {
+                console.log(sh)
+                    document.write("Starting Date:" +y1+"_"+month[date1.getMonth()]+" "+d1+sh);
+                    document.write("<br>");
+                    document.write("Ending Date:- "+month[date2.getMonth()]+"  "+d2+sh1);
+                }
+
+            else {
+                    // Print Both Dates
+                    console.log(sh)
+                    document.write("Starting Date:  " +y1+"- "+month[date1.getMonth()]+" "+d1+sh);
+                    document.write("<br>");
+                    document.write("Ending Date:  "+y2+"- "+month[date2.getMonth()]+"  "+d2+sh1);
+                }
+
+         </script>
     </body>
 </html>
