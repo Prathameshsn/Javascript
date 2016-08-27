@@ -1,0 +1,42 @@
+<html ng-app="singlePage">
+
+<head>
+        
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css">
+    
+</head>
+
+    <body>
+        
+        <nav class="navbar navbar-default">
+            
+            <div class="navbar-header">
+            <a class="navbar-brand" ui-sref="#">Angular Routing Example</a>
+            </div>
+
+            <ul class="nav navbar-nav navbar-right">
+                
+                <li><a ui-sref="home">Home</a></li>
+                <li><a ui-sref="about">About</a></li>
+                <li><a ui-sref="contact">Contact</a></li>
+            </ul>
+            
+        </nav>
+        
+        <div ui-view></div>
+        
+        <center>
+        View The Tutorial on&nbsp<a>Scotch.io</a>
+        <p>View The tutorial on&nbsp<a>Animating Your Single Page App</a></p></center>
+        
+    
+    </body>
+
+   <!--<script src="http://code.angularjs.org/1.2.13/angular.js"></script>-->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+   <script src="SinglePageApp.js"></script>
+
+</html>
+

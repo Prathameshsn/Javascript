@@ -1,0 +1,35 @@
+<html>
+
+<body>
+
+   
+    <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+ var config = {
+    apiKey: "AIzaSyB4tZ_1Led9_0bgtpb3wZHFlfGdpmtOCtk",
+    authDomain: "ipl-project-66b8a.firebaseapp.com",
+    databaseURL: "https://ipl-project-66b8a.firebaseio.com",
+    storageBucket: "ipl-project-66b8a.appspot.com",
+  };
+  firebase.initializeApp(config);
+  </script>
+
+
+
+    <script>
+        //var bigOne = document.getElementById('bigOne');
+        var playersRef = firebase.database().ref('IPL');
+
+        playersRef.on("child_added", function(data, prevChildKey) {
+            var newPlayer = data.val();
+            document.write("name: " + newPlayer.team_name + "<br>");
+            document.write("Captain name: " + newPlayer.team_captain + "<br>");
+            document.write("team_img_url: " + newPlayer.team_img_url +"<br>");
+            document.write("<br>")
+        });
+    </script>
+
+</body>
+
+</html>

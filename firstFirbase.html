@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>JS Bin</title>-->
+
+
+    My first webapp</head>
+
+<body>dd
+    <!--<h1 id="bigOne"></h1>-->
+    <!-- <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script> -->
+
+    <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCjBOGVGe0ehmVm089GlWIQ-_ht5UI3Rgo",
+            authDomain: "ipl2016-adcf4.firebaseapp.com",
+            databaseURL: "https://ipl2016-adcf4.firebaseio.com",
+            storageBucket: "ipl2016-adcf4.appspot.com",
+        };
+        firebase.initializeApp(config);
+</script>
+
+<script>
+        //var bigOne = document.getElementById('bigOne');
+        var playersRef = firebase.database().ref('/IPL-0
+
+        playersRef.on("child_added", function(data, prevChildKey) {
+            var newPlayer = data.val();
+            document.write("name: " + newPlayer.team_name + "<br>");
+            document.write("team_img_url: " + newPlayer.team_img_url +"<br>");
+        });
+    </script>fff
+</body>
+
+</html>
