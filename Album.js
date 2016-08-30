@@ -1,3 +1,11 @@
+/** Title: JSON object representing a part of your musical album collection.
+ *  Day:
+ *  Created By: Prathamesh Naik.
+ *  Purpose: Javascript Programing Practice.
+ */
+
+
+// Creating JSON for Album data
 var Album = [
     {
     "a1000":
@@ -13,20 +21,14 @@ var Album = [
     "track":"Smith"},
     },
 
-    // {
-    // "xyz"{
-    // "firstName":"Peter",
-    // "lastName":"Jones"},
-    // }
 ];
 
 
 var r=Album[0].a1000.artist + " " + Album[1].a2000.track;
-
 document.getElementById("demo").innerHTML =r;
 
 
-
+// function for modifying JSON data using aurguments
 function modify(id,artist,track) 
 {
     var a=Album[id].a1000.artist;
@@ -38,6 +40,6 @@ function modify(id,artist,track)
     document.getElementById("demo").innerHTML=Album[0].a1000.artist + " " + Album[1].a2000.track;
 }
 
-
+// Passing Aurguments to modify function
 modify(0,pa,ss);
 

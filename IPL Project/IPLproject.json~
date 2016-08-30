@@ -1796,8 +1796,6 @@
     "player_nationality" : "Indian",
     "player_role" : "All-rounder"
   } ],
-
-
   "team_info" : [ {
     "Dteam_captain" : "Zaheer Khan",
     "team_coach" : "Paddy Upton",
@@ -1857,7 +1855,7 @@
   } ],
 
 	"Sample" : [{
-	    "Cteam_captain" : "MS Dhoni",
+	    "team_captain" : "MS Dhoni",
 	    "team_coach" : "Stephen Fleming",
 	    "team_home_venue" : "Maharashtra Cricket Association's International Stadium",
 	    "team_img_url" : "RPS.jpg",

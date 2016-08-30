@@ -1,9 +1,17 @@
+/** Title: JSON object representing a part of your musical album collection.
+ *  Day:
+ *  Created By: Prathamesh Naik.
+ *  Purpose: Javascript Programing Practice.
+ */
 
+
+// Creating JSON for Album data
 var Album = {
                 "1245": {
                     "artist": "Robert Palmer",
                     "tracks": []
                 },
+
                 "2468": {
                     "album": "1999",
                     "artist": "Prince",
@@ -12,6 +20,7 @@ var Album = {
                         "Little Red Corvette"
                     ]
                 },
+
                 "2548": {
                     "album": "Slippery When Wet",
                     "artist": "Bon Jovi",
@@ -20,12 +29,14 @@ var Album = {
                         "You Give Love a Bad Name"
                     ]
                 },
+                
                 "5439": {
                     "album": "ABBA Gold"
                 }
             }
     
 
+// function for modifying JSON data using aurguments
 function modify(id,propt,value) 
 {
 
@@ -60,7 +71,7 @@ function modify(id,propt,value)
         
 }
 
-
+// Passing Aurguments to modify function
 modify(1245,"album","abc");
 modify(5439,"tracks","abc pqr");
 modify(5439,"tracks","abc xyz");

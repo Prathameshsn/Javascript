@@ -1,9 +1,6 @@
 <html>
 
-<body>
-
-   
-    <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
 <script>
   // Initialize Firebase
  var config = {
@@ -11,15 +8,16 @@
     authDomain: "ipl-project-66b8a.firebaseapp.com",
     databaseURL: "https://ipl-project-66b8a.firebaseio.com",
     storageBucket: "ipl-project-66b8a.appspot.com",
-  };
+    };
   firebase.initializeApp(config);
   </script>
 
 
+<body>
 
     <script>
         //var bigOne = document.getElementById('bigOne');
-        var playersRef = firebase.database().ref('IPL');
+        var playersRef = firebase.database().ref('team_info');
 
         playersRef.on("child_added", function(data, prevChildKey) {
             var newPlayer = data.val();

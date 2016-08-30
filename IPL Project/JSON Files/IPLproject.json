@@ -1798,71 +1798,73 @@
   } ],
 
 
-  "team_info" : [ {
+  "Delhi DareDevils_info" : [ {
     "Dteam_captain" : "Zaheer Khan",
     "team_coach" : "Paddy Upton",
     "team_home_venue" : "Feroz Shah Kotla Ground",
     "team_img_url" : "DD.jpg",
     "team_name" : "Delhi DareDevils",
     "team_owner" : "GMR Sports Pvt Ltd"
-  }, {
+  }],
+
+"Kings XI Punjab_info": [{
     "team_captain" : "Murali Vijay",
     "team_coach" : "Sanjay Bangar",
     "team_home_venue" : "IS Bindra Stadium",
     "team_img_url" : "KXIP.jpg",
     "team_name" : "Kings XI Punjab",
     "team_owner" : "KPH Dream Cricket Private Limited"
-  }, {
+  }],
+
+ "Gujarat Lions_info":[{
     "team_captain" : "Suresh Raina",
     "team_coach" : "Brad Hodge",
     "team_home_venue" : "Saurashtra Cricket Association Stadium",
     "team_img_url" : "GL.jpg",
     "team_name" : "Gujarat Lions",
     "team_owner" : "Intex Technologies"
-  }, {
+  }],
+
+"Kolkata Knight Riders_info": [{
     "team_captain" : "Gautam Gambhir",
     "team_coach" : "Jacques Kallis",
     "team_home_venue" : "Eden Gardens",
     "team_img_url" : "KKR.jpg",
     "team_name" : "Kolkata Knight Riders",
     "team_owner" : "Knight Riders Sports Private Ltd"
-  }, {
+  }], 
+
+"Royal Challengers Bangalore_info":[{
     "team_captain" : "Virat Kohli",
     "team_coach" : "Daniel Vettori",
     "team_home_venue" : "M. Chinnaswamy Stadium",
     "team_img_url" : "RCB.jpg",
     "team_name" : "Royal Challengers Bangalore",
     "team_owner" : "Royal Challengers Sports Private Ltd"
-  }, {
+  }], 
+"Mumbai Indians_info":[{
     "team_captain" : "Rohit Sharma",
     "team_coach" : "Ricky Ponting",
     "team_home_venue" : "Wankhede Stadium",
     "team_img_url" : "MI.jpg",
     "team_name" : "Mumbai Indians",
     "team_owner" : "Indiawin Sports Pvt. Ltd"
-  }, {
+  }], 
+"Sunrisers Hyderabad_info":[{
     "team_captain" : "David Warner",
     "team_coach" : "Tom Moody",
     "team_home_venue" : "Rajiv Gandhi Intl. Cricket Stadium",
     "team_img_url" : "SRH.jpg",
     "team_name" : "Sunrisers Hyderabad",
     "team_owner" : "SUN TV Network"
-  }, {
+  }],
+"Rising Pune Supergiants_info": [{
     "team_captain" : "MS Dhoni",
     "team_coach" : "Stephen Fleming",
     "team_home_venue" : "Maharashtra Cricket Association's International Stadium",
     "team_img_url" : "RPS.jpg",
     "team_name" : "Rising Pune Supergiants",
     "team_owner" : "RPSG Group"
-  } ],
+  }]
 
-	"Sample" : [{
-	    "Cteam_captain" : "MS Dhoni",
-	    "team_coach" : "Stephen Fleming",
-	    "team_home_venue" : "Maharashtra Cricket Association's International Stadium",
-	    "team_img_url" : "RPS.jpg",
-	    "team_name" : "Rising Pune Supergiants",
-	    "team_owner" : "RPSG Group"
-
-}]
 }

@@ -23,68 +23,70 @@
               }
       </style>-->
 
-    <script src="IPL.js"></script>      
+    <!--<script src="app.js"></script>      -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
-
-    </head>
-
-
-    <body ng-controller="Teams">
-
-        <nav class="navbar navbar-inverse">
-        <div class="container">    
-            <div class="navbar-brand"><b><u>Indian Premier League</u></b></div>
-        </div>
-        </nav>
-      
+    
+    </head> 
+        <!--<center><h3><b>&nbsp&nbsp&nbspWelcome to IPL 2016</center>-->
         <center><h3><b>&nbsp&nbsp&nbspAll Teams</h3></center>
         
 
-    
+    <!--Dividing Screen Space-->
    <div class="col-sm-12"><br>
 
             <div class="col-sm-3">
-              <center>&nbsp&nbsp&nbsp&nbsp<a ui-sref="MU"><img src="https://firebasestorage.googleapis.com/v0/b/ipl-project-66b8a.appspot.com/o/Team%20Logo%2FMumbai.png?alt=media&token=af160582-8b82-4eb3-a3c9-3d6391341c7f" width="200" height="200" class="img-rounded"></a>
-              <h4>Mumbai Indians</h4>
 
-              &nbsp&nbsp&nbsp&nbsp<a ui-sref="RCB"><img src="https://firebasestorage.googleapis.com/v0/b/ipl-project-66b8a.appspot.com/o/Team%20Logo%2FRCB.png?alt=media&token=842506fe-80fd-427e-978a-920f9919bedd" width="200" height="200" class="img-rounded"></a>
-              <h4>Royal Challengers Banglore</h4>
+              <center>&nbsp&nbsp&nbsp&nbsp<a ui-sref="MU"><img src="https://firebasestorage.googleapis.com/v0/b/ipl-project-66b8a.appspot.com/o/Team%20Logo%2FMumbai.png?alt=media&token=af160582-8b82-4eb3-a3c9-3d6391341c7f" 
+              width="200" height="200" class="img-rounded"></button></a>
+              <h4><B>Mumbai Indians</h4>
+
+              &nbsp&nbsp&nbsp&nbsp<a ui-sref="RCB"><img src="https://firebasestorage.googleapis.com/v0/b/ipl-project-66b8a.appspot.com/o/Team%20Logo%2FRCB.png?alt=media&token=842506fe-80fd-427e-978a-920f9919bedd"
+              width="200" height="200" class="img-rounded"></a>
+              <h4><B>Royal Challengers Banglore</h4>
               
             </div>
 
             <div class="col-sm-3">
-              <center>&nbsp&nbsp&nbsp&nbsp<a ui-sref="CSK"><img src="https://firebasestorage.googleapis.com/v0/b/ipl-project-66b8a.appspot.com/o/Team%20Logo%2FChennai.png?alt=media&token=1641cc1c-c911-48c3-96e4-948d183b2b34" width="200" height="200" class="img-rounded"></a>
-              <h4>Chennai Super Kings</h4>
 
-              &nbsp&nbsp&nbsp&nbsp<a ui-sref="DD"><img src="https://firebasestorage.googleapis.com/v0/b/ipl-project-66b8a.appspot.com/o/Team%20Logo%2FDelhi.png?alt=media&token=16ed60b5-a8c4-4141-b29a-618a2376b054" width="200" height="200" class="img-rounded"></a>
-              <h4>Delhi Deredevils</h4>
-              
-            </div>
+              <center>&nbsp&nbsp&nbsp&nbsp<a ui-sref="CSK"><img src="https://firebasestorage.googleapis.com/v0/b/ipl-project-66b8a.appspot.com/o/Team%20Logo%2FChennai.png?alt=media&token=1641cc1c-c911-48c3-96e4-948d183b2b34"
+               width="200" height="200" class="img-rounded"></a>
+              <h4><B>Chennai Super Kings</h4>
 
-
-            <div class="col-sm-3">
-              <center>&nbsp&nbsp&nbsp&nbsp<a ui-sref="RR"><img src="https://firebasestorage.googleapis.com/v0/b/ipl-project-66b8a.appspot.com/o/Team%20Logo%2FRajasthan.png?alt=media&token=33bc744d-2b94-4b5e-96b8-c0f4871db9f1" width="200" height="200" class="img-rounded"></a>
-              <h4>Rajstan Royals</h4>
-
-              &nbsp&nbsp&nbsp&nbsp<a ui-sref="KKR"><img src="https://firebasestorage.googleapis.com/v0/b/ipl-project-66b8a.appspot.com/o/Team%20Logo%2FKolkata.jpg?alt=media&token=05bf7cc2-7e23-4207-b751-192f41a4e52b" width="200" height="200" class="img-rounded"></a>
-              <h4>Kolkata Night Riders</h4>
+              &nbsp&nbsp&nbsp&nbsp<a ui-sref="DD"><img src="https://firebasestorage.googleapis.com/v0/b/ipl-project-66b8a.appspot.com/o/Team%20Logo%2FDelhi.png?alt=media&token=16ed60b5-a8c4-4141-b29a-618a2376b054" 
+              width="200" height="200" class="img-rounded"></a>
+              <h4><B>Delhi Deredevils</h4>
               
             </div>
 
 
             <div class="col-sm-3">
-              <center>&nbsp&nbsp&nbsp&nbsp<a ui-sref="DC"><img src="https://firebasestorage.googleapis.com/v0/b/ipl-project-66b8a.appspot.com/o/Team%20Logo%2FHydrabad.jpg?alt=media&token=4964a336-9d28-4763-a920-2d984f60ffdf" width="200" height="200" class="img-rounded"></a>
-              <h4>Decan Chargers</h4>
 
-              &nbsp&nbsp&nbsp&nbsp<a ui-sref="Pnj"><img src="https://firebasestorage.googleapis.com/v0/b/ipl-project-66b8a.appspot.com/o/Team%20Logo%2FPanjab.jpg?alt=media&token=54526e89-9d83-4661-a1d1-fe3eb5c42f96" width="200" height="200" class="img-rounded"></a>
-              <h4>Kings11 Panjab</h4></center>
+              <center>&nbsp&nbsp&nbsp&nbsp<a ui-sref="RR"><img src="https://firebasestorage.googleapis.com/v0/b/ipl-project-66b8a.appspot.com/o/Team%20Logo%2FRajasthan.png?alt=media&token=33bc744d-2b94-4b5e-96b8-c0f4871db9f1" 
+              width="200" height="200" class="img-rounded"></a>
+              <h4><B>Rajstan Royals</h4>
+
+              &nbsp&nbsp&nbsp&nbsp<a ui-sref="KKR"><img src="https://firebasestorage.googleapis.com/v0/b/ipl-project-66b8a.appspot.com/o/Team%20Logo%2FKolkata.jpg?alt=media&token=05bf7cc2-7e23-4207-b751-192f41a4e52b"
+               width="200" height="200" class="img-rounded"></a>
+              <h4><B>Kolkata Night Riders</h4>
+              
+            </div>
+
+
+            <div class="col-sm-3">
+
+              <center>&nbsp&nbsp&nbsp&nbsp<a ui-sref="DC"><img src="https://firebasestorage.googleapis.com/v0/b/ipl-project-66b8a.appspot.com/o/Team%20Logo%2FHydrabad.jpg?alt=media&token=4964a336-9d28-4763-a920-2d984f60ffdf" 
+              width="200" height="200" class="img-rounded"></a>
+              <h4><B>Decan Chargers</h4>
+
+              &nbsp&nbsp&nbsp&nbsp<a ui-sref="Pnj"><img src="https://firebasestorage.googleapis.com/v0/b/ipl-project-66b8a.appspot.com/o/Team%20Logo%2FPanjab.jpg?alt=media&token=54526e89-9d83-4661-a1d1-fe3eb5c42f96" 
+              width="200" height="200" class="img-rounded"></a>
+              <h4><B>Kings11 Panjab</h4></center>
               
             </div>
 
     </body>
-
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
 </html>

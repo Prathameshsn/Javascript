@@ -1,47 +1,43 @@
 <html ng-app="ipl">
 
-
 <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
 <script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyB4tZ_1Led9_0bgtpb3wZHFlfGdpmtOCtk",
-    authDomain: "ipl-project-66b8a.firebaseapp.com",
-    databaseURL: "https://ipl-project-66b8a.firebaseio.com",
-    storageBucket: "ipl-project-66b8a.appspot.com",
-  };
-  firebase.initializeApp(config);
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyB4tZ_1Led9_0bgtpb3wZHFlfGdpmtOCtk",
+        authDomain: "ipl-project-66b8a.firebaseapp.com",
+        databaseURL: "https://ipl-project-66b8a.firebaseio.com",
+        storageBucket: "ipl-project-66b8a.appspot.com",
+    };
+    firebase.initializeApp(config);
 </script>
     
-    
-
-    <head>
-
-    <script src="IPL.js"></script>      
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+<head>
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
-
-    </head>
+</head>
 
 
-    <body ng-controller="Teams">
-
+<body>
+        <!--Header-->
         <nav class="navbar navbar-inverse">
         <div class="container">    
-            <div class="navbar-brand"><b><u>Indian Premier League</u></b></div>
+            <div class="navbar-brand"><a ui-sref="IPL">
+                <b><u><font color="silver"> Indian Premier League</font></u></b></a></div>
+
+                <ui class="nav navbar-nav navbar-right">
+                    <li>Follow us</li>
+                </ui>
         </div>
         </nav>
       
-        <div>
-        <div ng-view>
-        <div>
-
+        <!--Section for Displaying Data using ng-routing-->
+       <div ui-view></div>
+</body>
+       
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+    <script src="app.js"></script>  
     
-  
-
-    </body>
-
 </html>

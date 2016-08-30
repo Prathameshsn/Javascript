@@ -1,0 +1,63 @@
+<html>
+
+    <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+        apiKey: "AIzaSyB4tZ_1Led9_0bgtpb3wZHFlfGdpmtOCtk",
+        authDomain: "ipl-project-66b8a.firebaseapp.com",
+        databaseURL: "https://ipl-project-66b8a.firebaseio.com",
+        storageBucket: "ipl-project-66b8a.appspot.com",
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <head>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/home/bridgeit/Documents/JS/IPL Project/app.js"></script>
+    <script src="/home/bridgeit/Documents/JS/IPL Project/Controller/PlayersCntrl.js"></script>
+
+
+    <!--<style>
+        body  {
+              background-image: url("/home/bridgeit/Documents/JS/IPL Project/Images/d.jpg");
+              }
+      </style>-->
+    </head>
+
+    <body ng-app="ipl" ng-controller="player">
+
+         <div class="col-sm-12"><br>
+
+                <div class="col-sm-3">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/ipl-project-66b8a.appspot.com/o/Team%20Logo%2FMumbai.png?alt=media&token=af160582-8b82-4eb3-a3c9-3d6391341c7f" 
+                             width="200" height="200" class="img-rounded" >
+                    <h2><b><font color="purple">Mumbai Indians</font></b></h3>
+                </div>
+
+                <div class="col-sm-3">
+                    
+                   
+                    <h4><b>Team Information:</b></h4> 
+                    <b>Captain Name:<p id="m2"></b></p><br>
+                    <b>Team Coach:<p id="m3"></b></p><br>
+                    <b>Team Owner:<p id="m4"></b></p><br>
+                    <b>Home Ground:<p id="m5"></b></p><br>
+                    
+                </div>
+
+                <div class="col-sm-6">
+                    <h4><b>Team Players</b></h4> <br>
+                    <p ng-repeat="x in data">
+                        {{x.player_name}}
+                    </p>
+                   
+                </div>
+         </div>
+
+    </body>
+    
+</html>

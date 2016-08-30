@@ -2,13 +2,13 @@ var singlePage = angular.module('singlePage', ['ui.router']);
 
 singlePage.config(function($stateProvider, $urlRouterProvider) {
 
-    $urlRouterProvider.otherwise('Pages/Home.html');
+    $urlRouterProvider.otherwise('/Home');
 
     $stateProvider
 
     .state('home', {
-                url : '/home',
-                templateUrl : 'Pages/Home.html',
+                url : '/Home',
+                templateUrl : 'Pages/Home.html'
                 // controller : 'MyModule'    
     })
     .state('about', {
