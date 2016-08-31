@@ -1,0 +1,42 @@
+<div ng-controller="team_ctrl">
+
+
+    <div class="col-sm-4">
+        <img src="https://firebasestorage.googleapis.com/v0/b/ipl-project-66b8a.appspot.com/o/Team%20Logo%2FMumbai.png?alt=media&token=af160582-8b82-4eb3-a3c9-3d6391341c7f" 
+                    width="200" height="200" class="img-rounded">
+        <h2><b><font color="purple">Mumbai Indians</font></b></h3>
+    </div>
+
+
+    <div class="col-sm-4">
+        <h3><b><u>Team Information</u></b></h3>
+        <table>
+            <tr ng-repeat="x in data1">
+              <td> 
+
+              <b>Team Captain:&nbsp</b>{{x.team_captain}}<br><br>
+              <b>Team Coach:&nbsp</b>{{x.team_coach}}<br><br>
+              <b>Home Ground:&nbsp</b>{{x.team_home_venue}}<br><br>
+              <b>Team Owner:&nbsp</b>{{x.team_owner}}<br>
+
+              </td>
+            </tr> 
+        </table>
+    </div>
+
+
+    <div class="col-sm-4">
+        <h3><b><u>Team Players</u> </b></h3>
+        <table>
+        <tbody>
+            <tr ng-repeat="x in data">
+              <td>  
+              <li>{{x.player_name}}</li>
+              </td>
+            </tr>
+        </tbody>
+        </table>
+      </div>
+ 
+ </div>
+

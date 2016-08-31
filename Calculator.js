@@ -1,4 +1,8 @@
-
+/** Title: Calculator.
+ *  Day:
+ *  Created By: Prathamesh Naik.
+ *  Purpose: Javascript Programing Practice.
+ */
             var num3;
 
             function add()
