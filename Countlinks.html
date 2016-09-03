@@ -1,26 +1,25 @@
-<html>
+<!--Title: Count links from URL.
+    Day:
+    Created By: Prathamesh Naik.
+    Purpose: Javascript Programing Practice.-->
 
+<html>
 <body>
 
+    Links:
+    <a href="/css/default.asp">Java</a><br>
+    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="/html/default.asp">HTML</a><br>
+    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="/css/default.asp">CSS</a><br><br>
 
-Links:
-<a href="/css/default.asp">Java</a><br>
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="/html/default.asp">HTML</a><br>
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="/css/default.asp">CSS</a><br><br>
+    <button onclick="myFunction()">Count Links</button><br><br>
 
-<button onclick="myFunction()">Count Links</button><br><br>
-
-
-  Number of Links in Document:<p id="demo">
-
+    Number of Links in Document:<p id="demo">
 
 <script>
-    function myFunction()
-    {
+    function myFunction() {
         var x = document.links.length;
         document.getElementById("demo").innerHTML = x;
     }
-
 </script>
 
 </body>

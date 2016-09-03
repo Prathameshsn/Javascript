@@ -1,15 +1,22 @@
 angular.module('myApp',['ui.router','firebase'])
-		.config(function($stateProvider,$urlRouterProvider){
+		.config(function($stateProvider,$urlRouterProvider) { 
 			$urlRouterProvider.otherwise('/home');
 			$stateProvider
-			.state('home',{
+			.state('home', {
 				url:'/home',
 				templateUrl:'template/home.html',
-				// controller:'team_ctrl'
+				controller:'teamctrl',
+				
 			})
-			.state('team',{
+			.state('team', {
 				url:'/team',
 				templateUrl:'template/team.html',
-				controller:'team_ctrl'
+				controller:'playercntrl'
 			})
+			// .state('player', {
+			// 	url:'/player',
+			// 	templateUrl:'template/player.html',
+			// 	// controller:'playercntrl'
+			// })
+
 		});

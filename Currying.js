@@ -1,23 +1,29 @@
-var add = function(a){
-  return function(b){
+/** Title: Study Curring Method.
+    Created By: Prathamesh Naik.
+    Purpose: Javascript Programing Practice.*/
+
+var add = function(a) {
+  return function(b) {
     return a + b;
   }
 }
-var substract = function(a){
-  return function(b){
+var substract = function(a) {
+  return function(b) {
     return a - b;
   }
 }
-var multiplication = function(a){
-  return function(b){
+var multiplication = function(a) {
+  return function(b) {
     return a * b;
   }
 }
-var division = function(a){
-  return function(b){
+var division = function(a) {
+  return function(b) {
     return a / b;
   }
 }
+
+
 var addTo = add(5);
 console.log(addTo(4));
 
