@@ -1,29 +1,14 @@
-<!--<div class="col-sm-12"><br>
-<div class="col-sm-3">
-	  <center><a ui-sref="team">&nbsp&nbsp&nbsp&nbsp<img src="https://firebasestorage.googleapis.com/v0/b/ipl-project-66b8a.appspot.com/o/Team%20Logo%2FHydrabad.jpg?alt=media&token=4964a336-9d28-4763-a920-2d984f60ffdf" 
-									width="200" height="200" class="img-rounded"></button></a>
-		<h4><B>Decan Chargers</h4>
-		<a ui-sref="team">&nbsp&nbsp&nbsp&nbsp<img src="https://firebasestorage.googleapis.com/v0/b/ipl-project-66b8a.appspot.com/o/Team%20Logo%2FPanjab.jpg?alt=media&token=54526e89-9d83-4661-a1d1-fe3eb5c42f96" 
-									width="200" height="200" class="img-rounded"></button></a>
-		<h4><B>Kings11 Panjab</h4></center>
- </div>-->
- 
-	
-<center><h3><b>&nbsp&nbsp&nbspAll Teams</h3></center>
+<center><h2><b>&nbsp&nbsp&nbspAll Teams</h2></center>
 
 <div class="col-sm-12">
+	
 	<div ng-repeat="x in data">
 	<div class="col-sm-3">
-
 		<center>
-		<a ui-sref="team" ng-click="changename(x.team_name)">
-			
-			
-		<img src="" width="200" height="200" class="img-rounded"></img><br>
-		{{x.team_name}}</a>
-		
+		<a ui-sref="team({ portfolioId: '{{x.team_name}}'})">
+		<img src="{{x.team_img_url}}" width="200" height="200" class="img-rounded"></img><br>
+		<font color="black">{{x.team_name}}</font></a>
 		</center>
-
 	</div>
 	</div>
 </div>

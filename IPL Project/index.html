@@ -1,6 +1,8 @@
 <html>
 
 <head>
+    <title>IPLT20.com</title>
+
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -12,13 +14,16 @@
 
     <style>
         body  {
-              background-image: url("/home/bridgeit/Downloads/JS/IPL Project/Images/plain-depth.jpg");
+              background-image: url("/home/bridgeit/Downloads/IPL/Images/plain-depth.jpg");
               }
     </style>
 </head>
 
+
 <body ng-app="myApp">
-    <nav class="navbar navbar-inverse">
+
+    <!--Header-->
+    <nav class="navbar navbar-inverse">   
           <div class="container">    
               <div class="navbar-brand"><a ui-sref="home">
                   <b><u><font color="white"> Indian Premier League</font></u></b></a>
@@ -37,6 +42,7 @@
  	
 <script src="controller/teamCntrl.js"></script>
 <script src="controller/playerCntrl.js"></script>
+<script src="controller/playerInfoCntrl.js"></script>
 <script src="service/teamService.js"></script>
 
 <script>

@@ -1,14 +1,14 @@
-angular.module('myApp').service('teamServ', function () {
+// angular.module('myApp').service('teamServ', function () {
 
-    var team;
+//     var team;
     
-    return {
-        setTeam : function (teamName) {
-        team = teamName.replace(/\s/g, '');
-        },
+//     return {
+//         setTeam : function (teamName) {
+//         team = teamName.replace(/\s/g, '');
+//         },
 
-        getTeam: function () {
-            return team;
-        }
-    }
-});
+//         getTeam: function () {
+//             return team;
+//         }
+//     }
+// });

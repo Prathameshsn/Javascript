@@ -1,24 +1,27 @@
+
 angular.module('myApp').controller('playercntrl',demo);
 
-function demo($scope,$firebaseObject,teamServ) {
+function demo($scope,$firebaseObject,$stateParams) {
 
-    var fbref = firebase.database().ref(teamServ.getTeam());
+    $scope.portfolioId = $stateParams.portfolioId;
+    var tname = $scope.portfolioId.replace(/\s/g, '');
+
+    var fbref = firebase.database().ref(tname);
     var fbObject = $firebaseObject(fbref);
 
+    // console.log( portfolioId );
     fbObject.$loaded().then(function(obj) {
-         $scope.data=obj;
+
+        $scope.data = obj;
+       
     });
+
+    
   
 };
 
-// function demo1($scope,$firebaseObject) {
-//     var fbref = firebase.database().ref('team_info');
-//     var fbObject = $firebaseObject(fbref);
 
-//     fbObject.$loaded().then(function(obj) {
-//         $scope.data1=obj;
-//     });
-  
-// };
+
+
 
 

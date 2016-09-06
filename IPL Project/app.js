@@ -6,17 +6,16 @@ angular.module('myApp',['ui.router','firebase'])
 				url:'/home',
 				templateUrl:'template/home.html',
 				controller:'teamctrl',
-				
 			})
 			.state('team', {
-				url:'/team',
+				url:'/team?portfolioId',
 				templateUrl:'template/team.html',
 				controller:'playercntrl'
 			})
-			// .state('player', {
-			// 	url:'/player',
-			// 	templateUrl:'template/player.html',
-			// 	// controller:'playercntrl'
-			// })
+			.state('player', {
+				url:'/player?portfolioId',
+				templateUrl:'template/player.html',
+				controller:'playerinfocntrl'
+			})
 
 		});
