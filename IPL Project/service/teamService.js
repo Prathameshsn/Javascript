@@ -1,14 +1,18 @@
-// angular.module('myApp').service('teamServ', function () {
 
-//     var team;
+angular.module('myApp').service('teamServ', function () {
+
+    var name;
     
-//     return {
-//         setTeam : function (teamName) {
-//         team = teamName.replace(/\s/g, '');
-//         },
+    return {
+        // method for chane URL
+        setName : function (pname) {
+        name = pname;
+        console.log(url);
+        },
 
-//         getTeam: function () {
-//             return team;
-//         }
-//     }
-// });
+        // method for retrive URL
+        getName : function () {
+            return url;
+        }
+    }
+});

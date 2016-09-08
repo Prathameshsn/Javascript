@@ -1,3 +1,4 @@
+
 angular.module('myApp',['ui.router','firebase'])
 		.config(function($stateProvider,$urlRouterProvider) { 
 			$urlRouterProvider.otherwise('/home');
@@ -7,15 +8,17 @@ angular.module('myApp',['ui.router','firebase'])
 				templateUrl:'template/home.html',
 				controller:'teamctrl',
 			})
+
 			.state('team', {
 				url:'/team?portfolioId',
 				templateUrl:'template/team.html',
 				controller:'playercntrl'
 			})
-			.state('player', {
-				url:'/player?portfolioId',
+
+			.state('team.player', {
+				url:'/player/portfolioId',
 				templateUrl:'template/player.html',
-				controller:'playerinfocntrl'
+				controller:'playercntrl'
 			})
 
 		});
