@@ -1,7 +1,9 @@
 
 angular.module('myApp').controller('playercntrl',demo);
 
-// Method for retrive firebase data
+/**
+ * Method for retrive firebase data
+ *  */
 function demo($scope,$firebaseObject,$stateParams) {
 
     $scope.portfolioId = $stateParams.portfolioId;

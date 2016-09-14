@@ -9,19 +9,19 @@
         <h2><b><font color="purple"><center>{{ portfolioId }}</center></font></b></h2> 
         </div><br>
 
-        <!--<h3><b><u>Team Information :</u></b></h3>
+        <h3><b><u>Team Information :</u></b></h3>
         <table>
             <tr ng-repeat="x in data1">
               <td> 
-                
+               <font color="black"> 
               <b>Team Captain:&nbsp</b>{{x.team_captain}}<br><br>
               <b>Team Coach:&nbsp</b>{{x.team_coach}}<br><br>
               <b>Home Ground:&nbsp</b>{{x.team_home_venue}}<br><br>
               <b>Team Owner:&nbsp</b>{{x.team_owner}}<br>
-
+               </font>
               </td>
             </tr> 
-        </table></center>-->
+        </table></center>
 </div>
 
 <div class="col-sm-3">

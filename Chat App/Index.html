@@ -1,0 +1,72 @@
+<!--Title: Chat App
+    Created By: Prathamesh Naik.
+    Day:12/9/2016-->
+
+<html>
+<head>
+    <title>Chat App</title>
+    <link rel="stylesheet" href="/home/bridgeit/Documents/JS/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/home/bridgeit/Documents/JS/Chat App/layout.css">
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body ng-app='chatApp' ng-controller="nameCntrl">
+
+    <div class="col-sm-12">
+    <!--Header Start-->
+    <div class="Rectangle">
+        <div class="Inbox"><br>
+            <a href="#"><font color="orange"><b>{{headerName}}</a></font>
+        </div>
+
+        <div class="Integrate-SDK">
+            <button type="button" class="btn btn-warning">Intrigate SDK</button>
+        </div>
+
+        <div class="headericons">
+            <a ui-sref="champaigns"> <i class="w3-xlarge"><i class="glyphicon glyphicon-comment">
+            </i></i></li></a>
+            <a ui-sref="champaigns"> <i class="w3-xlarge">&nbsp&nbsp<i class="glyphicon glyphicon-user">
+            </i></i></li></a>
+        </div><hr>
+    </div>
+    
+    <!--Header End-->
+    <!--<nav class="navbar navbar-default">
+            <div class="navbar-header">
+            <a class="navbar-brand" ui-sref="#">{{headerName}}</a>
+            </div>
+
+            <ul class="nav navbar-nav navbar-right">
+                
+                <li><button type="button" class="btn btn-warning">Intrigate SDK</button></li>
+                <li><i class="glyphicon glyphicon-comment"></i></li>
+                <li><i class="glyphicon glyphicon-user"></li>
+            </ul> 
+    </nav>-->
+
+    <!--Sidebar-->
+    <div class="Rectangle-2">
+            <i class="w3-xlarge">
+            <br>
+            <a ui-sref="inbox" class="font"><i class="glyphicon glyphicon-inbox" ng-click="printName('Inbox')"></i><br><br></a>
+            <a ui-sref="champaigns" class="font"><span class="glyphicon glyphicon-flag" ng-click="printName('Champaigns')"></span><br><br></a>
+            <a ui-sref="faq" class="font"><i class="glyphicon glyphicon-file" ng-click="printName('FAQ')"></i><br><br></a>
+            <a ui-sref="people" class="font"><i class="glyphicon glyphicon-user" ng-click="printName('People')"></i><br><br></a>
+            <a ui-sref="integration" class="font"><i class="glyphicon glyphicon-lock" ng-click="printName('Integration')"></i><br><br></a>
+            <a ui-sref="setting" class="font"><span class="glyphicon glyphicon-cog" ng-click="printName('Settings')"></span><br><br></a></i>
+    </div>
+    
+    <div class="uirouter">
+        <ui-view></ui-view>
+    </div>
+    </div>
+
+</body>
+    <script src="http://code.angularjs.org/1.2.13/angular.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+    <script src="app.js"></script>
+    <script src="controller/cntrl.js"></script>
+</html>
