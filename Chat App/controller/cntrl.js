@@ -5,9 +5,9 @@ function demo($scope, $stateParams) {
 
     $scope.headerName='Inbox';
     
-    $scope.printName = function (Inbox) {
-        $scope.headerName=Inbox;
-        console.log()
+    $scope.printName = function (headerName) {
+        $scope.headerName = headerName;
+       
     }
 
 };

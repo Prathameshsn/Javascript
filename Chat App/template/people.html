@@ -1,14 +1,11 @@
 <html>
 
 <head>
-    
     <link rel="stylesheet" href="/home/bridgeit/Documents/JS/Chat App/layout.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-
-
 </head>
 
-<body>
+<body ng-app="chatApp">
     <div class="col-sm-2 sidenav">
         <br>
           <h4><b>Segments</b></h4>
@@ -21,22 +18,55 @@
     <div class="col-sm-10">
     <h2>All</h2>
     <table class="table">
-        <tr>
+        <tr class="info">
+         <b>  
         <th>Name</th>
         <th>Last Seen</th>
         <th>Identifier</th>
         <th>Session</th>
-        <th>Push Enabled</th>
+        <th>Push Enabled</th></b>
         </tr>
         
-        <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <tr ng-repeat="x in data">
+        <td><a href ng-click="printdialog(x.username)"><font color="black">{{x.username}}</font></a></td>
+        <td><a href ng-click="printdialog(x.username)"><font color="black">{{x.lastseen}}</font></a></td>
+        <td><a href ng-click="printdialog(x.username)"><font color="black">{{x.identifier}}</font></a></td>
+        <td><a href ng-click="printdialog(x.username)"><font color="black">{{x.session}}</font></a></td>
+        <td><a href ng-click="printdialog(x.username)"><font color="black">{{x.pushenabled}}</font></a></td>
         </tr>                
     </table>
+    
     </div>
+
+    <!--Model for popup window-->
+    <div id="myModal" class="modal">
+
+        <!--Chat Window-->
+         <div class="chatbox">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <a href class="close" ng-click="close()">×</a> 
+                    <h4><b><span class="glyphicon glyphicon-comment"></span>&nbsp&nbsp{{username}}</b></h4>
+                    Status: <i>online</i><br>
+                    Email: <i>@gmail.com</i>
+                </div>
+                    
+
+                <div class="content">
+                    
+                </div> 
+
+                <div class="panel-footer">
+                    <input id="btn-input" type="text" class="form-control input-sm" placeholder="Type your message here..." />
+                    <span class="input-group-btn">
+                    <button class="btn btn-warning btn-sm" id="btn-chat">Send</button>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
 </body>
 </html>

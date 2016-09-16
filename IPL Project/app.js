@@ -13,7 +13,7 @@ angular.module('myApp',['ui.router','firebase'])
 			})
 
 			.state('team', {
-				url:'/team?portfolioId',
+				url:'/team?portfolioId',	
 				templateUrl:'template/team.html',
 				controller:'playercntrl'
 			})

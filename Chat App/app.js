@@ -1,4 +1,4 @@
-angular.module('chatApp',['ui.router'])
+angular.module('chatApp',['ui.router','firebase'])
 .config(function($stateProvider,$urlRouterProvider) {
 
     $urlRouterProvider.otherwise('/inbox');
@@ -14,34 +14,35 @@ angular.module('chatApp',['ui.router'])
     .state('faq', {
         url : '/faq',
         templateUrl : 'template/faq.html',
-        controller : 'nameCntrl'
+        
     })
 
     $stateProvider
     .state('integration', {
         url : '/integration',
         templateUrl : 'template/integration.html',
-        controller : 'nameCntrl'
+       
     })
 
     $stateProvider
     .state('setting', {
         url : '/setting',
         templateUrl : 'template/setting.html',
-        controller : 'nameCntrl'
+        
     })
 
     $stateProvider
     .state('people', {
         url : '/people',
         templateUrl : 'template/people.html',
-        controller : 'nameCntrl'
+        controller : 'userCntrl'
+        
     })
 
     .state('champaigns', {
         url : '/champaigns',
         templateUrl: 'template/champaigns.html',
-        controller : 'nameCntrl'
+        
 
     })
     

@@ -10,6 +10,7 @@ function demo($scope,$firebaseObject) {
 
         $scope.data=obj;
         
+        
     });
 };
 

@@ -32,8 +32,8 @@
             </i></i></li></a>
         </div><hr>
     </div>
-    
     <!--Header End-->
+
     <!--<nav class="navbar navbar-default">
             <div class="navbar-header">
             <a class="navbar-brand" ui-sref="#">{{headerName}}</a>
@@ -69,4 +69,19 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
     <script src="app.js"></script>
     <script src="controller/cntrl.js"></script>
+    <script src="controller/userCntrl.js"></script>
+
+    <script src="https://cdn.firebase.com/libs/angularfire/2.0.2/angularfire.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyBtKd2moH1fOuES6cmhMEN8MVZ2s8DoDzA",
+        authDomain: "chat-app-4b9cb.firebaseapp.com",
+        databaseURL: "https://chat-app-4b9cb.firebaseio.com",
+        storageBucket: "chat-app-4b9cb.appspot.com",
+        messagingSenderId: "752066345019"
+    };
+    firebase.initializeApp(config);
+    </script>
 </html>
