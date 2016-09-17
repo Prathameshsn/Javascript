@@ -15,6 +15,7 @@
 <body ng-app='chatApp' ng-controller="nameCntrl">
 
     <div class="col-sm-12">
+
     <!--Header Start-->
     <div class="Rectangle">
         <div class="Inbox"><br>
@@ -58,7 +59,7 @@
             <a ui-sref="integration" class="font"><i class="glyphicon glyphicon-lock" ng-click="printName('Integration')"></i><br><br></a>
             <a ui-sref="setting" class="font"><span class="glyphicon glyphicon-cog" ng-click="printName('Settings')"></span><br><br></a></i>
     </div>
-    
+
     <div class="uirouter">
         <ui-view></ui-view>
     </div>
@@ -70,7 +71,6 @@
     <script src="app.js"></script>
     <script src="controller/cntrl.js"></script>
     <script src="controller/userCntrl.js"></script>
-
     <script src="https://cdn.firebase.com/libs/angularfire/2.0.2/angularfire.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
     <script>

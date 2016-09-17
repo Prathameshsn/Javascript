@@ -55,7 +55,15 @@ angular.module('chatApp',['ui.router','firebase'])
     .state('inbox.new.user', {
         url : '/chat',
         templateUrl: 'template/inbox/chat.html',
+        controller : 'userCntrl'
+
+    })
+
+    .state('agent', {
+        url : '/agent',
+        templateUrl: 'template/setting/agent.html',
 
     });
+    
     
 });
