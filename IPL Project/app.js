@@ -1,15 +1,12 @@
 
-angular.module('myApp',['ui.router','firebase'])
+angular.module('myApp',['ui.router','firebase',])
 		.config(function($stateProvider,$urlRouterProvider) { 
 				$urlRouterProvider.otherwise('/home');
 			$stateProvider
 			.state('home', {
 				url:'/home',
 				templateUrl:'template/home.html',
-				controller:'teamctrl',
-				onEnter: function(){
-					console.log('inside home.');
-				}
+				controller:'teamctrl'
 			})
 
 			.state('team', {

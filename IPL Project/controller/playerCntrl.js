@@ -25,9 +25,7 @@ function demo($scope,$firebaseObject,$stateParams) {
     var fbObject1 = $firebaseObject(fbref1);
     
     fbObject1.$loaded().then(function(obj) {
-
         $scope.data1 = obj;
-         
     });
 
 

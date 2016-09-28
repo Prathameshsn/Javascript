@@ -28,7 +28,7 @@
 
 .Rectangle-2 {
   width: 70px;
-  height: 92%;
+  height: 98%;
   background-color: #000000;
   box-shadow: 2px 0 4px 1px rgba(0, 0, 0, 0.5);
   margin-top: 2px;
@@ -38,7 +38,7 @@
 .uirouter {
   margin-top: -620px;
   margin-left: 55px;
-  height: 92%;
+  height: 98%;
   width: 1240px;
   background-color: rgba(81, 115, 107, 0.53);
 }
@@ -177,6 +177,13 @@ width: 400px;
 height: 320px;
 }
 
+.logoutbox {
+margin-top: -45px;
+margin-left: 915px;
+width: 210px;
+height:230px;
+}
+
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -210,6 +217,9 @@ height: 320px;
   height: 289px;
 };
 
+.logoutcontent {
+    margin-left: 100px;
+};
 .msg{
     margin-left: 320px; 
 }
@@ -365,3 +375,28 @@ height: 320px;
     transition: all .4s ease 0s;
 }
 }
+
+/*LOGINFORM*/
+ body {
+     
+      padding-bottom: 40px;
+      background-color: #eee;
+      }
+
+    .form-signin {
+      max-width: 350px;
+      padding: 15px;
+      margin: 0 auto;
+    }
+
+    .form-signin .form-control {
+      position: relative;
+      height: auto;
+      -webkit-box-sizing: border-box;
+         -moz-box-sizing: border-box;
+              box-sizing: border-box;
+      padding: 10px;
+      font-size: 16px;
+    }
+
+      
