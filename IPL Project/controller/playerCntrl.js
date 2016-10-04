@@ -14,9 +14,7 @@ function demo($scope,$firebaseObject,$stateParams) {
     var fbObject = $firebaseObject(fbref);
 
     fbObject.$loaded().then(function(obj) {
-
         $scope.data = obj;
-       
     });
 
     // Replace method for add '_' to string

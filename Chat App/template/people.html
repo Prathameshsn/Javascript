@@ -56,9 +56,9 @@
                 </div>
                     
                 <!--body of chatwindow-->
-                <div class="content" ng-model="chatbox">
+                <div class="content" ng-model="chatbox" style="overflow:scroll">
                     <div class="col-sm-1">
-                    <button ng-repeat="x in msgdata">{{x.sendmsg}}<br></button>
+                    <button ng-repeat="x in msgdata">{{x.sendmsg}}<br>{{x.userMsg}}</button>
                     </div>
                 </div>
                 

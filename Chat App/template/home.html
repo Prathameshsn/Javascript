@@ -1,7 +1,5 @@
 
-<div ng-app="chatApp">
-
-    <div class="col-sm-12">
+<div class="col-sm-12">
 
     <!--Header Start-->
     <div class="Rectangle">
@@ -15,9 +13,9 @@
 
         <div class="headericons">
             <a ui-sref=""><i class="w3-xlarge"><i class="glyphicon glyphicon-comment">
-              </i></i></li></a>
+               </i></i></li></a>
             <a href ng-click="printlogout()">
-                <i class="w3-xlarge">&nbsp&nbsp<i class="glyphicon glyphicon-user"></i></i></li></a>
+               <i class="w3-xlarge">&nbsp&nbsp<i class="glyphicon glyphicon-user"></i></i></li></a>
         </div><hr>
     </div>
     <!--Header End-->
@@ -57,11 +55,10 @@
         <ui-view></ui-view>
     </div>
 
-
-      <!--Model for logout popup window-->
+    <!--Model for logout popup window-->
     <div id="logoutmodel" class="modal" ng-controller="userCntrl">
         <div class="logoutbox">
-            <!--footer of chatwindow-->
+            <!--footer of popup window-->
             <div class="panel-footer" >
                 Username:&nbsp&nbsp{{username}}<a href class="close" ng-click="closeit()">x</a> <br><br>
                 <a ng-href="/home/bridgeit/Documents/JS/Chat App/Index.html">
@@ -69,5 +66,4 @@
             </div>
         </div>
     </div>
-</div>
 </div>

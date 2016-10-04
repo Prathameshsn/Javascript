@@ -1,6 +1,6 @@
-angular.module('chatApp',['ui.router','firebase'])
-.config(function($stateProvider,$urlRouterProvider) {
 
+ angular.module('chatApp',['ui.router','firebase','LocalStorageModule'])
+.config(function($stateProvider,$urlRouterProvider,localStorageServiceProvider) {
 
     $urlRouterProvider.otherwise('/login');
 
@@ -18,7 +18,7 @@ angular.module('chatApp',['ui.router','firebase'])
     })
 
     .state('home.inbox', {
-        url : '/new?portfolioId',
+        // url : '/new?portfolioId',
         templateUrl : 'template/inbox.html',
         controller : 'nameCntrl'
     })
@@ -26,6 +26,7 @@ angular.module('chatApp',['ui.router','firebase'])
     .state('home.inbox.new', {
         url : '/new',
         templateUrl: 'template/inbox/new.html',
+       
     })
 
     .state('home.faq', {
@@ -41,6 +42,7 @@ angular.module('chatApp',['ui.router','firebase'])
     .state('home.setting', {
         url : '/setting',
         templateUrl : 'template/setting.html',  
+        controller: 'userCntrl'
     })
 
     .state('home.people', {
@@ -64,10 +66,17 @@ angular.module('chatApp',['ui.router','firebase'])
         templateUrl: 'template/setting/youracc.html',
     })
 
-
     .state('home.inbox.new.user', {
         url : '/chat',
         templateUrl: 'template/inbox/chat.html',
         controller : 'userCntrl'
     })
+
+    .state('signup', {
+        url : '/signup',
+        templateUrl: 'template/signup.html',
+        controller : 'loginCntrl' 
+    })
+
+    
 });
