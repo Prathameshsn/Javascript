@@ -1,5 +1,6 @@
 <div class="col-sm-9"><br>
-    <u><h3><b>Agents<b></h3></u><br>
+    <u>
+        <h3><b>Agents<b></h3></u><br>
 
     <!--Table of Users-->
     <table class="table">
@@ -14,7 +15,7 @@
             <td>Prathamesh</td>
             <td>prathameshsn94@gmail.com</td>
             <td>Account Admin</td>
-            <td><a href><i class="glyphicon glyphicon-pencil">Edit</a></td>
+            <td><a href><i class="glyphicon glyphicon-pencil" ng-click="edit()">Edit</a></td>
         </tr>                
     </table>
 </div>
@@ -35,4 +36,38 @@
         Super User - Super Users have access to Campaigns and FAQs in addition to the Inbox, 
         but cannot see or modify any common settings.<br><br><br>
         Admin - Admin will have access to all Hotline features enabled for your account.
+</div>
+
+<div id="agent" class="modal">
+<div class="edit">
+    <div class="panel panel-default">
+
+        <div class="panel-heading">
+            <a href class="close" ng-click="closeedit()">×</a> 
+            <h4><b>EDIT AGENT</b><h4>
+        </div>
+        
+         <hr>
+    
+        &nbspName:
+        <br>
+        <input type="text" class="form-control"><br>    
+        &nbspEmail:
+        <br>
+        <input type="text" class="form-control"><br> 
+        &nbspRole:
+        <br>
+        <select class="form-control" ng-disabled="true">
+            <option>Admin</option>
+            <option></option>
+        <select>
+        <hr>
+
+        <div class="panel-footer">
+            <button class="btn btn-primary">Edit</button>
+            <button class="btn btn-primary" ng-click="closeedit()">Cancel</button>
+        </div>
+
+    </div>
+</div>
 </div>

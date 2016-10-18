@@ -1,27 +1,25 @@
 
 angular.module('chatApp').controller('userCntrl', demo);
 
-
 function demo($scope, $firebaseObject, loginServ, $stateParams, localStorageService) {
 
-    $scope.username = loginServ.getName();
     // Default headername
     $scope.headerName = 'Inbox';
-    // get model of chatbox
-    var model = document.getElementById('myModal');
-    // get model of logoutbox
-    var logoutmodel = document.getElementById('logoutmodel');
-    
-
     // change headername
     $scope.printName = function (headerName) {
         $scope.headerName = headerName;
     }
 
 
-    // display logout window
+    // get model of logoutbox
+    var logoutmodel = document.getElementById('logoutmodel');
+    // display signout window
     $scope.printlogout = function () {
         logoutmodel.style.display = "block";
+    }
+    // click on close button of signout window
+    $scope.closeit = function () {
+        logoutmodel.style.display = "none";
     }
 
 
@@ -33,25 +31,48 @@ function demo($scope, $firebaseObject, loginServ, $stateParams, localStorageServ
     });
 
 
-    // function for Display chat box
+    // Display name of user on signout window 
+    var admin = firebase.database().ref('Admin');
+    admin.orderByChild('Status').equalTo('online').on("child_added", function (data) {
+        $scope.name = data.val().AdminName;
+        // pass username to servise
+        loginServ.setName($scope.name);
+    })
+    
+
+
+    // get model of chatbox
+    var model = document.getElementById('myModal');
+    // Function after username clicked
     $scope.printdialog = function (name) {
         $scope.username = name;
         // retrive firebase messages data
-        var userAdminName = loginServ.getName().concat(name)
+        var userAdminName = loginServ.getName().concat(name);
         var fbrefobj = firebase.database().ref(userAdminName);
         var name = firebase.database().ref(userAdminName);
         var fbObjectobj = $firebaseObject(name);
         fbObjectobj.$loaded().then(function (obj) {
             $scope.msgdata = obj;
         })
+        // Display chatbox
         model.style.display = "block";
         localStorageService.set('obj', userAdminName)
     }
 
-
-    // function for click on close button of chatbox
+    
+    // Function for click on close button of chatbox
     $scope.close = function () {
         model.style.display = "none";
+    }
+
+
+    // Change status to offline after logout
+    $scope.signout = function () {
+        var fbref = firebase.database().ref('Admin');
+        fbref.orderByChild('AdminName').equalTo(loginServ.getName()).on("child_added", function (data) {
+            var key = data.key;
+            fbref.child(key).update({ 'AdminName': loginServ.getName(), 'Status': 'offline' })
+        })
     }
 
 
@@ -66,8 +87,12 @@ function demo($scope, $firebaseObject, loginServ, $stateParams, localStorageServ
     }
 
 
-    //function for click on close button of signout window
-    $scope.closeit = function () {
-        logoutmodel.style.display = "none";
+    var agent = document.getElementById('agent');
+    $scope.edit = function () {
+        agent.style.display = "block";
     }
+     $scope.closeedit = function () {
+        agent.style.display = "none";
+    }
+
 };

@@ -17,37 +17,34 @@
     </div>
     
     <div class="col-sm-10">
-    <h2>All</h2>
-
-    <!--List of Users-->
-    <table class="table">
-        <tr class="active">
-         <b>  
-        <th>Name</th>
-        <th>Last Seen</th>
-        <th>Identifier</th>
-        <th>Session</th>
-        <th>Push Enabled</th></b>
-        </tr>
-        
-        <tr ng-repeat="x in data">
-        <td><a href ng-click="printdialog(x.username)"><font color="black">{{x.username}}</font></a></td>
-        <td><a href ng-click="printdialog(x.username)"><font color="black">{{x.lastseen}}</font></a></td>
-        <td><a href ng-click="printdialog(x.username)"><font color="black">{{x.identifier}}</font></a></td>
-        <td><a href ng-click="printdialog(x.username)"><font color="black">{{x.session}}</font></a></td>
-        <td><a href ng-click="printdialog(x.username)"><font color="black">{{x.pushenabled}}</font></a></td>
-        </tr>                
-    </table>
-    
+        <h2>All</h2>
+        <!--List of Users-->
+        <table class="table">
+            <tr class="active">
+            <b><th>Name</th>
+            <th>Status</th>
+            <th>Identifier</th>
+            <th>Session</th>
+            <th>Push Enabled</th></b>
+            </tr>
+            
+            <tr ng-repeat="x in data">
+            <td><a href ng-click="printdialog(x.username)"><font color="black">{{x.username}}</font></a></td>
+            <td><a href ng-click="printdialog(x.username)"><font color="black">{{x.status}}</font></a></td>
+            <td><a href ng-click="printdialog(x.username)"><font color="black">{{x.identifier}}</font></a></td>
+            <td><a href ng-click="printdialog(x.username)"><font color="black">{{x.session}}</font></a></td>
+            <td><a href ng-click="printdialog(x.username)"><font color="black">{{x.pushenabled}}</font></a></td>
+            </tr>                
+        </table>
     </div>
 
     <!--Model for popup chatwindow-->
     <div id="myModal" class="modal">
 
-        <!--Chat Window-->
+         <!--Chat Window-->
          <div class="chatbox">
             <div class="panel panel-default">
-                <!--header of chatwindow-->
+                <!--Header of chatwindow-->
                 <div class="panel-heading">
                     <a href class="close" ng-click="close()">×</a> 
                     <h4><b><span class="glyphicon glyphicon-comment"></span>&nbsp&nbsp{{username}}</b></h4>
@@ -55,16 +52,17 @@
                     Email: <i>@gmail.com</i>
                 </div>
                     
-                <!--body of chatwindow-->
-                <div class="content" ng-model="chatbox" style="overflow:scroll">
-                    <div class="col-sm-1">
-                    <button ng-repeat="x in msgdata">{{x.sendmsg}}<br>{{x.userMsg}}</button>
-                    </div>
+                <!--Body of chatwindow-->
+                <div class="content" ng-model="chatbox" style="overflow-x:hidden">
+                    <span ng-repeat="x in msgdata">
+                    <span class="messages msg_receive pull-right">{{x.sendmsg}}</span><br>
+                    <span class="messages msg_sent pull-left">{{x.userMsg}}<br></span>
+                    </span>
                 </div>
                 
-                <!--footer of chatwindow-->
+                <!--Footer of chatwindow-->
                 <div class="panel-footer">
-                    <input id="btn-input" type="text" class="form-control input-sm" 
+                    <input id="btn-input" type="textArea" class="form-control input-sm" 
                         ng-model="msgbox" placeholder="Type your message here..." />
                     <span class="input-group-btn">
                     <button class="btn btn-warning btn-sm" ng-click="printmsg()">Send</button>
@@ -77,3 +75,4 @@
 </body>
 
 </html>
+

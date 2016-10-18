@@ -2,27 +2,26 @@
 angular.module('chatApp').service('loginServ', function () {
 
     var data;
+    var newkey;
   
     
     return {
         // method for change username
         setName : function (name) {
         data = name;
-        console.log("set "+data);
         },
         
-        // method for retrive username  
+        // method for retrive username
         getName : function () {
-            console.log("get "+data);
             return data;
         },
 
-        dbsetname : function (name) {
-            data = name;    
-        },
+        // setKey : function (key) {
+        //     newkey = key;
+        // },
 
-        dbgetname : function () {
-            return data;
-        }
+        // getKey : function () {
+        //     return newkey;
+        // }
     }
 });
