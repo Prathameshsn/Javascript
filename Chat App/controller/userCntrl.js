@@ -76,7 +76,7 @@ function demo($scope, $firebaseObject, loginServ, $stateParams, localStorageServ
     }
 
 
-    // function after send button click of chatbox
+    // Function after send button click of chatbox
     $scope.printmsg = function () {
         // Dispaly sending message to chatbox in body
         $scope.msg = $scope.msgbox;
@@ -84,9 +84,11 @@ function demo($scope, $firebaseObject, loginServ, $stateParams, localStorageServ
         var fbrefobj = firebase.database().ref(localStorageService.get('obj'));
         var msg = fbrefobj.push();
         msg.set({ 'sendmsg': $scope.msg });
+        // clear textfield after message send
+        document.getElementById("submit").reset();
     }
 
-
+    // Edit agent block
     var agent = document.getElementById('agent');
     $scope.edit = function () {
         agent.style.display = "block";

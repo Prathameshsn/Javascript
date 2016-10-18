@@ -54,20 +54,20 @@
                     
                 <!--Body of chatwindow-->
                 <div class="content" ng-model="chatbox" style="overflow-x:hidden">
-                    <span ng-repeat="x in msgdata">
+                    <div ng-repeat="x in msgdata">
                     <span class="messages msg_receive pull-right">{{x.sendmsg}}</span><br>
                     <span class="messages msg_sent pull-left">{{x.userMsg}}<br></span>
-                    </span>
+                    </div>
                 </div>
                 
                 <!--Footer of chatwindow-->
-                <div class="panel-footer">
+                <form class="panel-footer" form id="submit">
                     <input id="btn-input" type="textArea" class="form-control input-sm" 
                         ng-model="msgbox" placeholder="Type your message here..." />
                     <span class="input-group-btn">
                     <button class="btn btn-warning btn-sm" ng-click="printmsg()">Send</button>
                     </span>
-                </div>
+                </form>
             </div>
         </div>
         
