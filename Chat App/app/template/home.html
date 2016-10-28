@@ -1,0 +1,72 @@
+
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"></link>
+    
+<div style="overflow:scroll">
+
+    <!--Header Start-->
+    <div class="Rectangle">
+        <div class="Inbox"><br>
+            <font color="orange"><b>{{headerName}}</font>
+        </div>                                                                                              
+
+        <div class="Integrate-SDK">
+            <button type="button" class="btn btn-warning" ui-sref=".sdk" ng-click="printName('SDK Integration')">
+            Intrigate SDK</button>
+        </div>
+
+        <div class="headericons">
+            <a ui-sref=".people"><i class="glyphicon glyphicon-comment">
+               </i></li></a>
+            <a href ng-click="printlogout()">&nbsp&nbsp
+                <i class="glyphicon glyphicon-user"></i></li></a>
+        </div><hr>
+    </div>
+    <!--Header End-->
+
+    <!--<nav class="navbar navbar-default">
+            <div class="navbar-header">
+            <a class="navbar-brand" ui-sref="#">{{headerName}}</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                
+                <li><button type="button" class="btn btn-warning">Intrigate SDK</button></li>
+                <li><i class="glyphicon glyphicon-comment"></i></li>
+                <li><i class="glyphicon glyphicon-user"></li>
+            </ul> 
+    </nav>-->
+
+    <!--Sidebar start-->
+    <div class="Rectangle-2">
+        <br><br>
+        <a ui-sref=".inbox" class="font">
+            <i class="glyphicon glyphicon-inbox" ng-click="printName('Inbox')"></i><br><br></a>
+        <a ui-sref=".champaigns" class="font">
+            <span class="glyphicon glyphicon-flag" ng-click="printName('Champaigns')"></span><br><br></a>
+        <a ui-sref=".faq" class="font">
+            <i class="glyphicon glyphicon-file" ng-click="printName('FAQ')"></i><br><br></a>
+        <a ui-sref=".people" class="font">
+            <i class="glyphicon glyphicon-user" ng-click="printName('People')"></i><br><br></a>
+        <a ui-sref=".integration" class="font">
+            <i class="glyphicon glyphicon-lock" ng-click="printName('Integration')"></i><br><br></a>
+        <a ui-sref=".setting" class="font">
+            <span class="glyphicon glyphicon-cog" ng-click="printName('Settings')"></span><br><br></a>
+    </div>
+    <!--Sidebar end-->
+
+    <div class="uirouter">
+        <ui-view></ui-view>
+    </div>
+
+    <!--Model for logout popup window-->
+    <div id="logoutmodel" class="modal" ng-controller="loginCntrl">
+        <div class="logoutbox">
+            <!--footer of popup window-->
+            <div class="panel-footer">
+                <u>Username:</u>&nbsp&nbsp{{admindata.AdminName}}
+                <a href class="close" ng-click="closeit()">x</a><br><br>
+                <button class="btn btn-warning btn-sm" ng-click="signout()" ui-sref="login">SignOut</button>
+            </div>
+        </div>
+    </div>
+
+</div>

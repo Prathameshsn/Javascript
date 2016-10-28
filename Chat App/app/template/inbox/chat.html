@@ -1,0 +1,29 @@
+<body>
+     <!--Chat Window-->
+    <div id="myModal">
+    <div class="chatwindow">
+        <div class="panel panel-success">
+            
+                <!--header of chatwindow-->
+            <div class="panel-heading">
+                    <a href class="close" ng-click="close()">×</a> 
+                    <span class="glyphicon glyphicon-comment"></span>Chat  
+            </div>
+
+                <!--body of chatwindow-->       
+            <div class="" ng-model="chatbox"><button>{{msg}}</button><br><br><br><br><br><br><br><br>
+            </div>
+
+                 <!--footer of chatwindow-->
+            <div class="panel-footer">
+                <input id="btn-input" type="text" class="form-control input-sm" 
+                    ng-model="msgbox" placeholder="Type your message here..." />
+                <span class="input-group-btn">
+                <button class="btn btn-warning btn-sm" ng-click="printmsg()">Send</button>
+                </span>
+            </div>
+
+        </div>
+    </div>
+    </div>
+</body>

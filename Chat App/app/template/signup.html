@@ -1,0 +1,22 @@
+
+<!--Sign up-->
+<form class="form-signin" name="signin">
+    <center><img src="user2.png" 
+    class="img-circle" style="width:160px;height:160px"></img><br></center>
+    <br>
+
+    <input type="text" class="form-control" ng-model="username" placeholder="Name" required>
+
+    <input type="text" class="form-control" ng-model="email" placeholder="Email">
+
+    <input type="password" class="form-control" ng-model="pwd" placeholder="Password"><br>
+
+    <input type="text" class="form-control" ng-model="appname" placeholder="App Name">
+   
+    <input type="text" class="form-control" ng-model="company" placeholder="Company">
+   
+    <input type="text" class="form-control" ng-model="num" placeholder="Phn no." required><br>
+          
+    <a ui-sref="login"><button class="btn btn-lg btn-success btn-block" ng-click="signup()"
+     ng-disabled="signin.$invalid">Sign up</button></a> 
+</form>    

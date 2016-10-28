@@ -1,0 +1,78 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="/home/bridgeit/Documents/JS/Chat App/layout.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+
+<body ng-app="chatApp">
+    <div class="col-sm-2 sidenav">
+        <br>
+        <!--Sidebar-->
+        <h4><b>Segments</b></h4>
+        <p><h5>All</h5>
+        <h5>All Android Users</h5>
+        <h5>All IOS Users</h5>
+        <h5></h5><br>   
+    </div>
+    
+    <div class="col-sm-10">
+        <h2>All</h2>
+        <!--List of Users-->
+        <table class="table">
+            <tr class="active">
+            <b><th>Name</th>
+            <th>Status</th>
+            <th>Identifier</th>
+            <th>Session</th>
+            <th>Push Enabled</th></b>
+            </tr>
+            
+            <tr ng-repeat="x in data">
+            <td><a href ng-click="printdialog(x.username)"><font color="black">{{x.username}}</font></a></td>
+            <td><a href ng-click="printdialog(x.username)"><font color="black">{{x.status}}</font></a></td>
+            <td><a href ng-click="printdialog(x.username)"><font color="black">{{x.identifier}}</font></a></td>
+            <td><a href ng-click="printdialog(x.username)"><font color="black">{{x.session}}</font></a></td>
+            <td><a href ng-click="printdialog(x.username)"><font color="black">{{x.pushenabled}}</font></a></td>
+            </tr>                
+        </table>
+    </div>
+
+    <!--Model for popup chatwindow-->
+    <div id="myModal" class="modal">
+
+         <!--Chat Window-->
+         <div class="chatbox">
+            <div class="panel panel-default">
+                <!--Header of chatwindow-->
+                <div class="panel-heading">
+                    <a href class="close" ng-click="close()">×</a> 
+                    <h4><b><span class="glyphicon glyphicon-comment"></span>&nbsp&nbsp{{username}}</b></h4>
+                    Status: <i>online</i><br>
+                    Email: <i>@gmail.com</i>
+                </div>
+                    
+                <!--Body of chatwindow-->
+                <div class="content" ng-model="chatbox" style="overflow-x:hidden">
+                    <div ng-repeat="x in msgdata">
+                    <span class="messages msg_receive pull-right">{{x.sendmsg}}</span><br>
+                    <span class="messages msg_sent pull-left">{{x.userMsg}}<br></span>
+                    </div>
+                </div>
+                
+                <!--Footer of chatwindow-->
+                <form class="panel-footer" form id="submit">
+                    <input id="btn-input" type="textArea" class="form-control input-sm" 
+                        ng-model="msgbox" placeholder="Type your message here..." />
+                    <span class="input-group-btn">
+                    <button class="btn btn-warning btn-sm" ng-click="printmsg()">Send</button>
+                    </span>
+                </form>
+            </div>
+        </div>
+        
+    </div>
+</body>
+
+</html>
+

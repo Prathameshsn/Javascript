@@ -1,0 +1,18 @@
+
+<!--Login form-->
+<form class="form-signin" name="validate">
+    <h2>Please sign in</h2>
+
+    <input type="text" name="username" class="form-control" placeholder="Username" ng-model="username" required>
+
+    <input type="text" name="password" class="form-control" placeholder="Password" ng-model="password">
+
+    <h5><input type="checkbox">&nbsp Remember me</h5>
+
+    <a ui-sref="home"><button class="btn btn-lg btn-primary btn-block" ng-click="login()"
+        ng-disabled="validate.$invalid">Login</button></a>
+
+    <font color="purple">
+        <u><a ui-sref="signup">Sign up for new user</a></u>
+    </font>
+</form>

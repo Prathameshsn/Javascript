@@ -1,0 +1,26 @@
+<html>
+    <head>
+    </head>
+
+<body>
+
+<script src="/home/bridgeit/Documents/JS/Table.js">
+
+
+</script>
+
+<center>
+<button onclick="row()">Add Row</button><br>
+<button onclick="column()">Add Column </button><br>
+
+<br><table border="4" id="tab">
+    <tr id=col>
+    <td id=row>
+    </td>
+    </tr>
+
+</table>
+</center>
+
+</body>
+</html>
